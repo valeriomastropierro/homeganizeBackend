@@ -8,7 +8,7 @@ const app = express();
 const { Server } = require("socket.io");
 
 app.use(cors({
-    origin: 'http://localhost:3000',
+    origin: 'https://homeganizefrontend.onrender.com',
     credentials: true,
 }));
 app.use(cookies());
@@ -34,7 +34,7 @@ connectionDB();
 const server = http.createServer(app);
 const io = new Server(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://homeganizefrontend.onrender.com',
         methods: ['GET', 'POST'],
         credentials: true,
     },
