@@ -76,7 +76,7 @@ const loginUser = async (req, res) => {
         const accessToken = jwt.sign({ username: user.username, userId: user._id }, secret, { expiresIn: "6000s" });
         res.cookie("authToken", accessToken, {
             httpOnly: true,
-            secure: false,
+            secure: true,
             maxAge: 3600000
         })
 
