@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../Homeganize_frontend"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "homeganize"
+    }
+}
