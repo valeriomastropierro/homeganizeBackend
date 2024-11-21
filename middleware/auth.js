@@ -6,7 +6,7 @@ const secret = process.env.JWT_SECRET || 'your_secret_key';
 const authenticateToken = (req, res, next) => {
 
     console.log('authenticating token');
-    const token = req.cookies.authToken;
+    const token = req.cookies?.token || req.headers['authorization']?.split(' ')[1];
 
     if (!token) {
         return res.status(401).json({ message: 'accesso negato, token mancante'});
