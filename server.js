@@ -17,8 +17,6 @@ app.use(express.json());
 const Router = require('./router');
 app.use('/', Router);
 
-//MongoDB credentials
-//username:mastropierrovale password:VpHUHsndQyzMnPEk
 function connectionDB() {
     try {
         console.log('connecting to MongoDB')
